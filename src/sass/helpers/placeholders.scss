@@ -1,0 +1,66 @@
+%button {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: $primary-white-color;
+  text-transform: uppercase;
+}
+
+%link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+%subtitle {
+  font-family: $subtitle-font;
+  text-align: center;
+  font-weight: 400;
+}
+
+%title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+%background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%pseudo {
+  content: '';
+  display: block;
+}
+
+%subtitle-black {
+  font-size: 24px;
+  color: $primary-dark-color;
+  margin-bottom: 12px;
+}
+
+%title-black {
+  position: relative;
+  font-size: 30px;
+  color: $primary-dark-color;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%transform-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

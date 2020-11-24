@@ -1,0 +1,119 @@
+.page-header {
+  min-height: 1000px;
+  background-image: linear-gradient(
+      360deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    ),
+    url('../images/background.jpg');
+  @extend %background;
+  color: $primary-white-color;
+  padding-top: 23px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url('../images/background@2x.jpg');
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+    font-size: 72px;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    @extend %title;
+    margin: 0;
+    @include font-set(150px, 140px);
+    margin-bottom: 108px;
+
+    &-span {
+      display: block;
+    }
+  }
+
+  &__btn {
+    @extend %button;
+    margin: 0 auto;
+    width: 164px;
+    height: 44px;
+    border: 3px solid $primary-white-color;
+    background-color: transparent;
+  }
+}
+
+.page-navigation {
+  @extend %flex-space-between;
+  align-items: baseline;
+  margin-bottom: 160px;
+}
+
+.site-logo {
+  @extend %link;
+  font-size: 30px;
+  font-weight: 700;
+  color: $primary-white-color;
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    color: $main--bcg-color-sand;
+  }
+}
+
+.site-navigation {
+  @extend %flex-space-between;
+  width: 620px;
+
+  &__link {
+    @extend %link;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $primary-white-color;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:focus {
+      color: $main--bcg-color-sand;
+    }
+
+    &:hover,
+    &:focus {
+      .site-navigation__icon {
+        fill: $main--bcg-color-sand;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      @extend %pseudo;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: -12px;
+      background-color: $main--bcg-color-sand;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: $primary-white-color;
+    transition: all 0.3s linear;
+  }
+}
